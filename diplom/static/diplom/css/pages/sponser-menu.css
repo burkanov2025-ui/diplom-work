@@ -1,0 +1,473 @@
+.kabinet_obertka {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 2rem 60px;
+}
+
+.kabinet_shapka {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.kabinet_shapka h1 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.kabinet_shapka p {
+    color: var(--tekst_seryy);
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.dobav_blok {
+    background: var(--fon2);
+    border: 1px solid var(--gran);
+    border-radius: 0;
+    padding: 24px;
+    margin-bottom: 32px;
+}
+
+.dobav_zagol {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.forma_ryad {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+@media (max-width: 600px) {
+    .forma_ryad {
+        grid-template-columns: 1fr;
+    }
+}
+
+.dobav_knopki {
+    display: flex;
+    gap: 10px;
+    margin-top: 4px;
+    flex-wrap: wrap;
+}
+
+.moi_spisok {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.moi_kard {
+    background: var(--fon2);
+    border: 1px solid var(--gran);
+    border-radius: 0;
+    padding: 18px 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    transition: border-color 0.2s;
+}
+
+.moi_kard:hover {
+    border-color: var(--gran_hover);
+}
+
+.moi_foto {
+    width: 80px;
+    height: 80px;
+    border-radius: 0;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.moi_foto_zam {
+    width: 80px;
+    height: 80px;
+    border-radius: 0;
+    background: var(--fon3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    flex-shrink: 0;
+}
+
+.moi_info {
+    flex: 1;
+    min-width: 0;
+}
+
+.moi_nazv {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.moi_meta {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.moi_meta_punkt {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    color: var(--tekst_seryy);
+}
+
+.moi_deystviya {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.pustoy_blok {
+    text-align: center;
+    padding: 50px 20px;
+    color: var(--tekst_seryy);
+    background: var(--fon2);
+    border: 1px dashed var(--gran);
+    border-radius: 0;
+}
+
+.pustoy_blok .ikona {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.map_podskazki {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.map_action_knopka {
+    padding: 8px 14px;
+    font-size: 13px;
+}
+
+.karta_meropr {
+    width: 100%;
+    height: 320px;
+    border: 1px solid var(--gran);
+    background: var(--fon3);
+}
+
+.karta_meropr .leaflet-control-container .leaflet-bar a,
+.karta_meropr .leaflet-popup-content-wrapper,
+.karta_meropr .leaflet-popup-tip {
+    border-radius: 0;
+}
+
+.sponser_menu_textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.kabinet_razdel_nazv {
+    margin-bottom: 16px;
+}
+
+.moi_spisok_loading {
+    grid-column: unset;
+}
+
+.sponser_menu_empty_help {
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+.sponser_menu_status_metka {
+    font-size: 10px;
+}
+
+.sponser_menu_delete_btn {
+    padding: 6px 14px;
+    font-size: 13px;
+}
+
+.moi_otkliki_blok {
+    margin: 14px 0 16px;
+    padding: 14px;
+    border-radius: 0;
+    background: var(--fon3);
+    border: 1px solid var(--gran);
+}
+
+.moi_otkliki_zagol {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.moi_otkliki_pust {
+    color: var(--tekst_seryy);
+    font-size: 13px;
+}
+
+.moi_otkliki_spisok {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.moi_otklik_kard {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--gran);
+    border-radius: 0;
+    padding: 12px;
+}
+
+.moi_otklik_shapka {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+}
+
+.moi_otklik_avtor {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.moi_otklik_data {
+    color: var(--tekst_seryy);
+    font-size: 12px;
+}
+
+.moi_otklik_kontakty {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+    color: var(--tekst_seryy);
+    font-size: 12px;
+}
+
+.moi_otklik_kontakty a {
+    color: var(--glavcvet);
+    text-decoration: none;
+}
+
+.moi_otklik_text {
+    color: var(--tekst_seryy);
+    font-size: 14px;
+    line-height: 1.55;
+    white-space: pre-wrap;
+}
+
+.moi_otklik_actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.moi_otklik_accept_btn {
+    padding: 8px 14px;
+    font-size: 13px;
+}
+
+.moi_otkliki_status {
+    color: var(--glavcvet);
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.modal_fon {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 1rem;
+    overflow-y: auto;
+}
+.modal_fon::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.modal_fon.otkrit {
+    display: flex;
+}
+
+.modal_blok {
+    background: var(--fon2);
+    border: 1px solid var(--gran);
+    border-radius: 0;
+    width: 100%;
+    max-width: 620px;
+    max-height: 90vh;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.modal_foto {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.modal_foto_zam {
+    width: 100%;
+    height: 220px;
+    background: var(--fon3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 56px;
+    border-radius: 0;
+}
+
+.modal_telo {
+    padding: 24px;
+}
+
+.modal_zakrit {
+    float: right;
+    background: var(--fon3);
+    border: 1px solid var(--gran);
+    border-radius: 0;
+    color: var(--tekst_seryy);
+    font-size: 18px;
+    cursor: pointer;
+    padding: 2px 10px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.modal_zakrit:hover {
+    color: var(--tekst);
+}
+
+.modal_nazv {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    clear: both;
+}
+
+.modal_opis {
+    color: var(--tekst_seryy);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.modal_info {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 16px;
+    background: var(--fon3);
+    border-radius: 0;
+    margin-bottom: 20px;
+}
+
+.modal_info_punkt {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.modal_info_metka {
+    font-size: 11px;
+    color: var(--tekst_seryy);
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.modal_info_val {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.moi_kard_knopki {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.moi_kard_knopki .knopka {
+    flex: 1;
+    min-width: 120px;
+    font-size: 12px;
+    padding: 8px 12px;
+}
+
+.modal_redaktirovanie_blok {
+    position: relative;
+    padding: 24px;
+}
+
+.modal_redaktirovanie_blok h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.modal_redaktirovanie_blok form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.forma_knopki {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.forma_knopki .knopka {
+    min-width: 100px;
+}
+
+.vzaimod_blok {
+    border-top: 1px solid var(--gran);
+    padding-top: 20px;
+    margin-top: 4px;
+}
+
+@media (max-width: 700px) {
+    .modal_telo {
+        padding: 18px;
+    }
+
+    .modal_info {
+        flex-direction: column;
+    }
+
+    .karta_meropr {
+        height: 260px;
+    }
+}

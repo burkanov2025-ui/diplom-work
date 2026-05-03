@@ -1,0 +1,104 @@
+.reg_obertka {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.reg_blok {
+    width: 100%;
+    max-width: 480px;
+}
+
+.reg_shapka {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.reg_shapka h1 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+}
+
+.reg_shapka p {
+    color: var(--tekst_seryy);
+    font-size: 14px;
+}
+
+.reg_forma {
+    background: var(--fon2);
+    border: 1px solid var(--gran);
+    border-radius: 16px;
+    padding: 28px;
+}
+
+.tip_perekl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.tip_knopka {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--gran);
+    background: var(--fon3);
+    color: var(--tekst_seryy);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.15s;
+    font-family: 'Manrope', sans-serif;
+}
+
+.tip_knopka.aktiv {
+    background: rgba(99, 211, 180, 0.1);
+    border-color: var(--glavcvet);
+    color: var(--glavcvet);
+}
+
+.dlya_org {
+    display: none;
+}
+
+.dlya_org.vidno {
+    display: block;
+}
+
+.razdelitel {
+    height: 1px;
+    background: var(--gran);
+    margin: 20px 0;
+}
+
+.reg_forma .knopka {
+    width: 100%;
+    justify-content: center;
+    margin-top: 4px;
+}
+
+.reg_nizh {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--tekst_seryy);
+}
+
+.reg_nizh a {
+    color: var(--glavcvet);
+    text-decoration: none;
+}
+
+.reg_nizh a:hover {
+    text-decoration: underline;
+}
+
+.pole_gruppa textarea {
+    resize: vertical;
+    min-height: 80px;
+}

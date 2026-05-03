@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Отклики для спонсора{% endblock %}
+
+{% block styles %}
+	<link rel="stylesheet" href="{% static 'diplom/css/pages/otklik.css' %}">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+{% endblock %} 
+
+{% block body %}
+<div class="kabinet_obertka">
+	<section class="sponsor_panel" id="sponsor_view">
+		<div class="kabinet_shapka sponsor_panel_shapka">
+			<div>
+				<h1>Отклики для спонсора</h1>
+				<p>Выбор мероприятий и отправка предложений организаторам</p>
+			</div>
+			<a href="/profile/update/" class="knopka knopka_obv sponsor_profile_link">
+				Профиль спонсора
+			</a>
+		</div>
+
+		<div class="sponsor_panel_hint">
+			<p>Мероприятия из списка ниже доступны для просмотра откликов и отправки предложения о спонсорстве.</p>
+		</div>
+
+		<div class="razdel_nazv kabinet_razdel_nazv">
+			Доступные мероприятия <span id="sponsor_kol"></span>
+		</div>
+
+		<div class="sponsor_spisok" id="sponsor_spisok">
+			<div class="zaglushka sponsor_spisok_loading">
+				<div class="krujok_zagruz"></div>
+				<div>Загружаем мероприятия...</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+<div class="modal_fon" id="sponsor_modal_okno">
+	<div class="modal_blok" id="sponsor_modal_telo"></div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+	<script src="{% static 'diplom/js/pages/otklik.js' %}"></script>
+{% endblock %}

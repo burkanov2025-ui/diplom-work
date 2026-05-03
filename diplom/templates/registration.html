@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}IT Sponser{% endblock %}
+
+{% block styles %}
+	<link rel="stylesheet" href="{% static 'diplom/css/pages/registration.css' %}">
+{% endblock %}
+
+{% block body %}
+
+<div class="reg_obertka">
+	<div class="reg_blok">
+		<div class="reg_shapka">
+			<h1>Создать аккаунт</h1>
+			<p>Присоединяйся к платформе IT Sponser</p>
+		</div>
+
+		<div class="reg_forma">
+			<div class="uvedoml uvedoml_err" id="reg_oshibka"></div>
+			<div class="uvedoml uvedoml_ok" id="reg_ok"></div>
+
+			<div class="pole_gruppa">
+				<label>Кто ты?</label>
+				<div class="tip_perekl">
+					<button class="tip_knopka aktiv" id="btn_org">Организатор</button>
+					<button class="tip_knopka" id="btn_spon">Спонсор</button>
+				</div>
+			</div>
+
+			<div class="razdelitel"></div>
+
+			<div class="pole_gruppa">
+				<label for="reg_login">Логин*</label>
+				<input type="text" id="reg_login" placeholder="придумай логин">
+			</div>
+
+			<div class="pole_gruppa">
+				<label for="reg_parol">Пароль*</label>
+				<input type="password" id="reg_parol" placeholder="минимум 8 символов">
+			</div>
+
+			<div class="pole_gruppa">
+				<label for="reg_parol2">Повтори пароль*</label>
+				<input type="password" id="reg_parol2" placeholder="ещё раз пароль">
+			</div>
+
+			<div class="pole_gruppa">
+				<label for="reg_nomer">Номер телефона*</label>
+				<input type="text" id="reg_nomer" placeholder="+996 700 000000">
+			</div>
+
+			<div class="pole_gruppa">
+				<label for="reg_sayt">Сайт</label>
+				<input type="url" id="reg_sayt" placeholder="https://example.com">
+			</div>
+
+			<div class="pole_gruppa">
+				<label for="reg_instagram">Instagram</label>
+				<input type="url" id="reg_instagram" placeholder="https://instagram.com/username">
+			</div>
+
+			<div class="pole_gruppa">
+				<label for="reg_telegram">Telegram</label>
+				<input type="url" id="reg_telegram" placeholder="https://t.me/username">
+			</div>
+
+			<div class="dlya_org" id="blok_kompan">
+				<div class="razdelitel"></div>
+
+				<div class="pole_gruppa">
+					<label for="reg_kompan">Название компании*</label>
+					<input type="text" id="reg_kompan" placeholder="название твоей организации">
+				</div>
+			</div>
+
+			<button class="knopka knopka_sin" id="reg_knopka">
+				Зарегистрироваться
+			</button>
+		</div>
+
+		<div class="reg_nizh">
+			Если есть аккаунт: <a href="/login/">Войти</a>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+	<script src="{% static 'diplom/js/pages/registration.js' %}"></script>
+{% endblock %}

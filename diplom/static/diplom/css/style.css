@@ -1,0 +1,395 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --fon: #0d0f14;
+    --fon2: #13161e;
+    --fon3: #1a1e28;
+    --gran: rgba(255,255,255,0.08);
+    --gran_hover: rgba(99, 211, 180, 0.3);
+    --tekst: #e8eaf0;
+    --tekst_seryy: #7a8099;
+    --glavcvet: #63d3b4;
+    --cvet2: #4fa8d8;
+    --krasniy: #e05c5c;
+    --zheltiy: #e0a84a;
+}
+
+body {
+    background: var(--fon);
+    background-image: url('/static/diplom/img/фоновая%20иконка%20для%20мобильного%20экрана.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--tekst);
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    body {
+        background-image: url('/static/diplom/img/фоновая%20иконка%20для%20широкого%20экрана.png');
+    }
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background: rgba(13, 15, 20, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--gran);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+}
+
+.logo {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--glavcvet);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.logo span { color: var(--tekst_seryy); }
+
+.nav_ssylki {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav_ssylki a {
+    text-decoration: none;
+    padding: 7px 16px;
+    border-radius: 0;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.15s, color 0.15s;
+}
+
+.nav_ssylki a.prostor { color: var(--tekst_seryy); }
+.nav_ssylki a.prostor:hover { background: var(--fon3); color: var(--tekst); }
+
+.nav_ssylki a.glavnaya {
+    background: var(--glavcvet);
+    color: #0d0f14;
+}
+
+.nav_ssylki a.glavnaya:hover { background: #7ce0c5; }
+
+.nav_burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 5px;
+    padding: 0;
+}
+
+.nav_burger span {
+    width: 24px;
+    height: 2px;
+    background: var(--tekst);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.nav_burger.aktiv span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.nav_burger.aktiv span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav_burger.aktiv span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.knopka {
+    padding: 12px 28px;
+    border-radius: 0;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.1s, background 0.15s;
+    font-family: 'Manrope', sans-serif;
+}
+
+.knopka:active { transform: scale(0.98); }
+
+.knopka_sin { background: var(--glavcvet); color: #0d0f14; }
+.knopka_sin:hover { background: #7ce0c5; }
+
+.knopka_obv {
+    background: transparent;
+    color: var(--tekst);
+    border: 1px solid var(--gran);
+}
+
+.knopka_obv:hover { border-color: rgba(255,255,255,0.2); background: var(--fon3); }
+
+.knopka_del {
+    background: rgba(224, 92, 92, 0.15);
+    color: var(--krasniy);
+    border: 1px solid rgba(224, 92, 92, 0.25);
+}
+
+.knopka_del:hover { background: rgba(224, 92, 92, 0.25); }
+
+.kard {
+    background: var(--fon2);
+    border: 1px solid var(--gran);
+    border-radius: 0;
+    overflow: hidden;
+    transition: border-color 0.2s, transform 0.15s;
+}
+
+.kard:hover { border-color: var(--gran_hover); transform: translateY(-2px); }
+
+.razdel {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 2rem;
+}
+
+.razdel_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.razdel_nazv { font-size: 22px; font-weight: 700; letter-spacing: -0.5px; }
+
+.razdel_nazv span {
+    color: var(--tekst_seryy);
+    font-weight: 400;
+    font-size: 15px;
+    margin-left: 8px;
+}
+
+.metka {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    font-family: 'JetBrains Mono', monospace;
+    padding: 3px 9px;
+    border-radius: 0;
+}
+
+.metka_ok {
+    background: rgba(99, 211, 180, 0.1);
+    color: var(--glavcvet);
+    border: 1px solid rgba(99, 211, 180, 0.2);
+}
+
+.metka_net {
+    background: rgba(224, 92, 92, 0.1);
+    color: var(--krasniy);
+    border: 1px solid rgba(224, 92, 92, 0.2);
+}
+
+.metka_warn {
+    background: rgba(224, 168, 74, 0.1);
+    color: var(--zheltiy);
+    border: 1px solid rgba(224, 168, 74, 0.2);
+}
+
+.zaglushka {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--tekst_seryy);
+    grid-column: 1 / -1;
+}
+
+.zaglushka .ikona { font-size: 40px; margin-bottom: 12px; }
+
+.krujok_zagruz {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border: 2px solid var(--gran);
+    border-top-color: var(--glavcvet);
+    border-radius: 50%;
+    animation: vraschat 0.8s linear infinite;
+    margin-bottom: 12px;
+}
+
+@keyframes vraschat { to { transform: rotate(360deg); } }
+@keyframes migat { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+.pole_gruppa { display: flex; flex-direction: column; gap: 6px; margin-bottom: 18px; }
+
+.pole_gruppa label { font-size: 13px; font-weight: 500; color: var(--tekst_seryy); }
+
+.pole_gruppa input,
+.pole_gruppa textarea,
+.pole_gruppa select {
+    background: var(--fon3);
+    border: 1px solid var(--gran);
+    border-radius: 0;
+    padding: 10px 14px;
+    color: var(--tekst);
+    font-size: 15px;
+    font-family: 'Manrope', sans-serif;
+    transition: border-color 0.15s;
+    outline: none;
+    width: 100%;
+}
+
+.pole_gruppa input:focus,
+.pole_gruppa textarea:focus,
+.pole_gruppa select:focus { border-color: var(--glavcvet); }
+
+.pole_gruppa input::placeholder,
+.pole_gruppa textarea::placeholder { color: var(--tekst_seryy); opacity: 0.6; }
+
+.oshibka_pole { font-size: 12px; color: var(--krasniy); margin-top: 4px; display: none; }
+
+.uvedoml { padding: 12px 16px; border-radius: 0; font-size: 14px; margin-bottom: 16px; display: none; }
+
+.pole_podskazka {
+    color: var(--tekst_seryy);
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+.uvedoml_ok {
+    background: rgba(99, 211, 180, 0.1);
+    border: 1px solid rgba(99, 211, 180, 0.25);
+    color: var(--glavcvet);
+}
+
+.uvedoml_err {
+    background: rgba(224, 92, 92, 0.1);
+    border: 1px solid rgba(224, 92, 92, 0.25);
+    color: var(--krasniy);
+}
+
+.is-hidden {
+    display: none !important;
+}
+
+footer {
+    border-top: 1px solid var(--gran);
+    padding: 24px 2rem;
+    text-align: center;
+    color: var(--tekst_seryy);
+    font-size: 13px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 0 1rem;
+    }
+
+    .nav_burger {
+        display: flex;
+    }
+
+    .nav_ssylki {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        background: rgba(13, 15, 20, 0.98);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--gran);
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        box-sizing: border-box;
+    }
+
+    .nav_ssylki.otkryto {
+        max-height: 500px;
+    }
+
+    .nav_ssylki a {
+        padding: 14px 16px;
+        border-radius: 0;
+        border-bottom: 1px solid var(--gran);
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .nav_ssylki a.glavnaya {
+        background: var(--glavcvet);
+        color: #0d0f14;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        padding: 0 1rem;
+    }
+
+    .razdel {
+        padding: 40px 1rem;
+    }
+
+    .knopka {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+button,
+input,
+select,
+textarea,
+.knopka,
+.kard,
+.metka,
+.uvedoml,
+.modal_blok,
+.modal_zakrit,
+.dobav_blok,
+.stat_kard,
+.info_kard,
+.shag,
+.pustoy_blok {
+    border-radius: 0 !important;
+}

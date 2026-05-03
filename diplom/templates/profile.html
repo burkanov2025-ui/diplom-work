@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Профиль{% endblock %}
+
+{% block styles %}
+	<link rel="stylesheet" href="{% static 'diplom/css/pages/profile.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="profil_obertka">
+
+	<div class="zaglushka" id="zagruz_blok">
+		<div class="krujok_zagruz"></div>
+		<div>Загружаем профиль...</div>
+	</div>
+
+	<div id="profil_kontent" class="is-hidden">
+
+		<div class="profil_shapka">
+			<div class="profil_avatar" id="profil_bukva">?</div>
+				<div class="profil_imya_blok">
+				<div class="profil_imya" id="profil_imya"></div>
+					<div class="profil_tip_blok">
+					<div class="metka metka_ok" id="profil_tip_metka"></div>
+				</div>
+			</div>
+			<a href="/profile/update/" class="knopka knopka_obv profil_izm_knopka">
+				Редактировать
+			</a>
+		</div>
+
+
+		<div class="stat_ryad" id="stat_ryad"></div>
+
+		<div class="info_kard">
+			<div class="info_kard_zagol">КОНТАКТЫ</div>
+
+			<div class="info_ryad">
+				<span class="info_metka">Телефон</span>
+				<span class="info_znach" id="profil_nomer">—</span>
+			</div>
+			<div class="info_ryad">
+				<span class="info_metka">Сайт</span>
+				<span class="info_znach" id="profil_sayt">—</span>
+			</div>
+			<div class="info_ryad">
+				<span class="info_metka">Компания</span>
+				<span class="info_znach" id="profil_kompan">—</span>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+	<script src="{% static 'diplom/js/pages/profile.js' %}"></script>
+{% endblock %}

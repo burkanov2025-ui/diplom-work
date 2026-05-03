@@ -1,0 +1,58 @@
+.vhod_obertka {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.vhod_blok {
+    width: 100%;
+    max-width: 420px;
+}
+
+.vhod_shapka {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.vhod_shapka h1 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+}
+
+.vhod_shapka p {
+    color: var(--tekst_seryy);
+    font-size: 14px;
+}
+
+.vhod_forma {
+    background: var(--fon2);
+    border: 1px solid var(--gran);
+    border-radius: 16px;
+    padding: 28px;
+}
+
+.vhod_forma .knopka {
+    width: 100%;
+    justify-content: center;
+    margin-top: 4px;
+}
+
+.vhod_nizh {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--tekst_seryy);
+}
+
+.vhod_nizh a {
+    color: var(--glavcvet);
+    text-decoration: none;
+}
+
+.vhod_nizh a:hover {
+    text-decoration: underline;
+}

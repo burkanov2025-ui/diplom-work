@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Редактирование профиля{% endblock %}
+
+{% block styles %}
+	<link rel="stylesheet" href="{% static 'diplom/css/pages/profile-update.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="izm_obertka">
+
+	<div class="izm_shapka">
+		<a href="/profile/" class="nazad_knopka">← Назад</a>
+		<h1>Редактирование</h1>
+	</div>
+
+	<div class="zaglushka" id="zagruz_blok">
+		<div class="krujok_zagruz"></div>
+		<div>Загружаем данные...</div>
+	</div>
+
+	<div id="forma_blok" class="is-hidden">
+		<div class="izm_forma">
+
+			<div class="uvedoml uvedoml_err" id="izm_oshibka"></div>
+			<div class="uvedoml uvedoml_ok" id="izm_ok"></div>
+
+			<div class="pole_gruppa">
+				<label for="izm_login">Логин</label>
+				<input type="text" id="izm_login" placeholder="Логин">
+			</div>
+
+			<div class="pole_gruppa">
+				<label for="izm_nomer">Номер телефона</label>
+				<input type="text" id="izm_nomer" placeholder="+996 700 000000">
+			</div>
+
+			<div class="pole_gruppa">
+				<label for="izm_sayt">Сайт</label>
+				<input type="url" id="izm_sayt" placeholder="https://example.com">
+			</div>
+
+			<div class="pole_gruppa">
+				<label for="izm_instagram">Instagram</label>
+				<input type="url" id="izm_instagram" placeholder="https://instagram.com/username">
+			</div>
+
+			<div class="pole_gruppa">
+				<label for="izm_telegram">Telegram</label>
+				<input type="url" id="izm_telegram" placeholder="https://t.me/username">
+			</div>
+
+			<div class="pole_gruppa is-hidden" id="kompan_blok">
+				<label for="izm_kompan">Название компании</label>
+				<input type="text" id="izm_kompan" placeholder="Название организации">
+			</div>
+
+			<div class="razdelitel"><span>ПАРОЛЬ</span></div>
+
+			<label class="parol_toggle">
+				<input type="checkbox" id="menyat_parol">
+				Изменить пароль
+			</label>
+
+			<div class="parol_blok" id="parol_blok">
+				<div class="pole_gruppa">
+					<label for="nov_parol">Новый пароль</label>
+					<input type="password" id="nov_parol" placeholder="минимум 8 символов">
+				</div>
+				<div class="pole_gruppa">
+					<label for="nov_parol2">Повтори пароль</label>
+					<input type="password" id="nov_parol2" placeholder="ещё раз">
+				</div>
+			</div>
+
+			<div class="izm_knopki">
+				<button class="knopka knopka_sin" id="sohranit_knopka">Сохранить</button>
+				<a href="/profile/" class="knopka knopka_obv">Отмена</a>
+			</div>
+
+		</div>
+	</div>
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+	<script src="{% static 'diplom/js/pages/profile-update.js' %}"></script>
+{% endblock %}

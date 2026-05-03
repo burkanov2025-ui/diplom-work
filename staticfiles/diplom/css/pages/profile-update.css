@@ -1,0 +1,107 @@
+.izm_obertka {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 40px 2rem 60px;
+}
+
+.izm_shapka {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+.izm_shapka h1 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.nazad_knopka {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--tekst_seryy);
+    text-decoration: none;
+    font-size: 14px;
+    padding: 7px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--gran);
+    background: var(--fon2);
+    transition: color 0.15s, border-color 0.15s;
+}
+
+.nazad_knopka:hover {
+    color: var(--tekst);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.izm_forma {
+    background: var(--fon2);
+    border: 1px solid var(--gran);
+    border-radius: 16px;
+    padding: 28px;
+}
+
+.razdelitel {
+    height: 1px;
+    background: var(--gran);
+    margin: 20px 0;
+    position: relative;
+}
+
+.razdelitel span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--fon2);
+    padding: 0 10px;
+    font-size: 11px;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--tekst_seryy);
+    letter-spacing: 1px;
+}
+
+.izm_knopki {
+    display: flex;
+    gap: 10px;
+    margin-top: 4px;
+    flex-wrap: wrap;
+}
+
+.parol_toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--tekst_seryy);
+    user-select: none;
+}
+
+.parol_toggle input[type="checkbox"] {
+    accent-color: var(--glavcvet);
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.parol_toggle:hover {
+    color: var(--tekst);
+}
+
+.parol_blok {
+    display: none;
+}
+
+.parol_blok.vidno {
+    display: block;
+}
+
+.izm_retry_knopka {
+    font-size: 13px;
+    padding: 8px 18px;
+    margin-top: 12px;
+}

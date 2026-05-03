@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Вход{% endblock %}
+
+{% block styles %}
+	<link rel="stylesheet" href="{% static 'diplom/css/pages/login.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="vhod_obertka">
+	<div class="vhod_blok">
+		<div class="vhod_shapka">
+			<h1>Добро пожаловать</h1>
+			<p>Войди в свой аккаунт</p>
+		</div>
+
+		<div class="vhod_forma">
+			<div class="uvedoml uvedoml_err" id="oshibka_msg"></div>
+
+			<div class="pole_gruppa">
+				<label for="login_pole">Логин</label>
+			<input type="text" id="login_pole" placeholder="Введи логин">
+			</div>
+
+			<div class="pole_gruppa">
+				<label for="parol_pole">Пароль</label>
+				<input type="password" id="parol_pole" placeholder="Введи пароль">
+			</div>
+
+			<button class="knopka knopka_sin" id="vhod_knopka">
+			Войти
+			</button>
+		</div>
+
+			<div class="vhod_nizh">
+			Если аккаунта нету: <a href="/register/">Зарегистрироваться</a>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+	<script src="{% static 'diplom/js/pages/login.js' %}"></script>
+{% endblock %}

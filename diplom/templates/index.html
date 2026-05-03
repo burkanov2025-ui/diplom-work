@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}IT Sponser{% endblock %}
+
+{% block styles %}
+	<link rel="stylesheet" href="{% static 'diplom/css/pages/index.css' %}">
+{% endblock %}
+
+{% block body %}
+
+<div class="index_hero">
+	<div class="glav_blok">
+		<div class="glav_metka">платформа для IT-мероприятий</div>
+		<h1>Найди спонсора<br>для своего <em>IT-события</em></h1>
+		<p>Публикуй хакатоны, митапы и конференции, а спонсоры сами найдут тебя. Всё в одном месте.</p>
+
+		<div class="glav_knopki">
+			<a href="/register/" class="knopka knopka_sin">Разместить мероприятие →</a>
+			<a href="/sponsers/" class="knopka knopka_obv">Смотреть все события</a>
+		</div>
+	</div>
+
+	<div class="statistika">
+		<div class="stat_blok">
+			<div class="stat_chislo" id="kol_meropr">—</div>
+			<div class="stat_podpis">мероприятий размещено</div>
+		</div>
+		<div class="stat_blok">
+			<div class="stat_chislo" id="kol_spons">—</div>
+			<div class="stat_podpis">нашли спонсора</div>
+		</div>
+		<div class="stat_blok">
+			<div class="stat_chislo">IT</div>
+			<div class="stat_podpis">тематика</div>
+		</div>
+	</div>
+</div>
+
+<div class="razdel">
+	<div class="razdel_top">
+		<div class="razdel_nazv">
+			Актуальные мероприятия
+			<span id="skolko_vsego"></span>
+		</div>
+		<a href="/sponsers/" class="knopka knopka_obv glav_vse_knopka">Все →</a>
+	</div>
+
+	<div class="meropr_grid" id="meropr_grid">
+		<div class="zaglushka">
+			<div class="krujok_zagruz"></div>
+			<div>Загружаем мероприятия...</div>
+		</div>
+	</div>
+</div>
+
+<div class="kak_blok">
+	<div class="razdel">
+		<div class="razdel_top">
+			<div class="razdel_nazv">Как это работает</div>
+		</div>
+
+		<div class="shagi">
+			<div class="shag">
+				<div class="shag_nom">01 / ORGANIZER</div>
+				<h3>Регистрируйся и размещай</h3>
+				<p>Создай аккаунт как организатор, заполни информацию о своём IT-мероприятии.</p>
+			</div>
+
+			<div class="shag">
+				<div class="shag_nom">02 / SPONSER</div>
+				<h3>Ищи подходящие события</h3>
+				<p>Просматривай список мероприятий, фильтруй по датам и масштабу, оставляй комментарии.</p>
+			</div>
+
+			<div class="shag">
+				<div class="shag_nom">03 / RESULT</div>
+				<h3>Договаривайтесь напрямую</h3>
+				<p>Спонсор выходит на связь с организатором, и мероприятие получает финансирование.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="cta_blok">
+	<h2>Готов разместить мероприятие?</h2>
+	<p>Регистрация бесплатна и занимает меньше минуты.</p>
+	<a href="/register/" class="knopka knopka_sin cta_knopka">
+		Начать прямо сейчас →
+	</a>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+	<script src="{% static 'diplom/js/pages/index.js' %}"></script>
+{% endblock %}

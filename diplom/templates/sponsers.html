@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Мероприятия{% endblock %}
+
+{% block styles %}
+	<link rel="stylesheet" href="{% static 'diplom/css/pages/sponsers.css' %}">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+{% endblock %}
+
+{% block body %}
+<div class="spon_shapka">
+	<h1>IT-мероприятия <span id="kol_vsego" class="sponsers_count"></span></h1>
+	<p>Мероприятия которые ищут спонсоров</p>
+
+	<div class="filtr_blok">
+		<input type="text" id="poisk_pole" placeholder="Поиск по названию...">
+
+		<select class="filtr_select" id="filtr_status">
+			<option value="vse">Все статусы</option>
+			<option value="ishchet">Ищет спонсора</option>
+			<option value="nashel">Спонсор найден</option>
+		</select>
+	</div>
+</div>
+
+<div class="razdel">
+	<div class="meropr_grid" id="meropr_grid">
+		<div class="zaglushka">
+			<div class="krujok_zagruz"></div>
+			<div>Загружаем мероприятия...</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal_fon" id="modal_okno">
+	<div class="modal_blok" id="modal_telo"></div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+	<script src="{% static 'diplom/js/pages/sponsers.js' %}"></script>
+{% endblock %}

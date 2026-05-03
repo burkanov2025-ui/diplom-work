@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Пользователи{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'diplom/css/pages/users.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="users_shapka">
+    <h1>Пользователи <span id="kol_vsego" class="users_count"></span></h1>
+    <p>Организаторы и спонсоры платформы</p>
+</div>
+
+<div class="razdel">
+    <div class="users_grid" id="users_grid">
+        <div class="zaglushka">
+            <div class="krujok_zagruz"></div>
+            <div>Загружаем пользователей...</div>
+        
+        </div>
+    </div>
+</div>
+
+<div class="modal_fon" id="modal_okno">
+    <div class="modal_blok" id="modal_telo"></div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'diplom/js/pages/users.js' %}"></script>
+{% endblock %}
