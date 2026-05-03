@@ -46,7 +46,7 @@ async function zagruzMeropr() {
                     <div class="ikona">📋</div>
                     <div>Мероприятий пока нет</div>
                     <a href="/register/" class="index_empty_link">
-                        Зарегистрируйся и размести первое
+                        Зарегистрируйтесь и разместите первое
                     </a>
                 </div>
             `;
